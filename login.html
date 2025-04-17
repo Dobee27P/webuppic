@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập - Trang Upload Ảnh</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login Container */
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Login Logo */
+.login-logo h1 {
+    color: #2196F3;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.login-logo p {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #2196F3;
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+    outline: none;
+}
+
+/* Login Button */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #2196F3, #0b7dda);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    background: linear-gradient(135deg, #0b7dda, #2196F3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(33, 150, 243, 0.4);
+}
+
+/* Error Message */
+.error-message {
+    color: #f44336;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    text-align: center;
+    display: none;
+}
+
+/* Register Link */
+.register-link {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.register-link a {
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+    color: #0b7dda;
+}
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-logo">
+            <h1>Đăng Nhập</h1>
+            <p>Quản lý ảnh của bạn</p>
+        </div>
+        
+        <div id="error-message" class="error-message">
+            Tên đăng nhập hoặc mật khẩu không đúng!
+        </div>
+        
+        <form class="login-form" id="login-form">
+            <div class="form-group">
+                <label for="username">Tên đăng nhập:</label>
+                <input type="text" id="username" placeholder="Nhập tên đăng nhập" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" placeholder="Nhập mật khẩu" required>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="login-button">Đăng Nhập</button>
+            </div>
+        </form>
+        
+        <div class="register-link">
+            <p>Chưa có tài khoản? <a href="#" id="register-link">Đăng ký ngay</a></p>
+        </div>
+    </div>
+
+
+    <script src="login.js"></script>
+</body>
+</html>

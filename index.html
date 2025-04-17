@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Upload Ảnh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Trang Upload Ảnh</h1>
+            <div class="user-panel">
+                <span id="user-display"></span>
+                <button id="logout-btn" class="logout-btn">Đăng xuất</button>
+            </div>
+        </div>
+        
+        <div class="folder-section">
+            <div class="form-group">
+                <label for="new-folder">Tạo thư mục mới:</label>
+                <div class="input-group">
+                    <input type="text" id="new-folder" placeholder="Tên thư mục">
+                    <button onclick="createFolder()">Tạo</button>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Thư mục hiện có:</label>
+                <div class="folder-list" id="folder-list">
+                    <div class="folder active" data-folder="default">Mặc định</div>
+                </div>
+            </div>
+            
+            <div class="form-group" id="folder-actions">
+                <button onclick="deleteFolder()" class="delete-folder-btn" id="delete-folder-btn">Xóa thư mục hiện tại</button>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="image-upload">Chọn ảnh để tải lên:</label>
+            <input type="file" id="image-upload" accept="image/*" multiple>
+        </div>
+        
+        <div class="form-group">
+            <button onclick="uploadImages()" class="upload-btn">Tải lên</button>
+        </div>
+        
+        <h2>Ảnh đã tải lên</h2>
+        <div class="gallery" id="image-gallery"></div>
+    </div>
+    <footer class="footer">
+        <p>@ by: Dobee</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
