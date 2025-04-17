@@ -1,0 +1,189 @@
+/* Thiết lập chung */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Header và phần người dùng */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.user-panel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#user-display {
+    font-weight: bold;
+}
+
+.logout-btn {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.logout-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Form elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.input-group {
+    display: flex;
+}
+
+.input-group button {
+    width: 80px;
+    margin-left: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Quản lý thư mục */
+.folder-section {
+    margin-bottom: 20px;
+}
+
+.folder-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.folder {
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.folder.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+/* Nút xóa thư mục */
+.delete-folder-btn {
+    background-color: #f44336;
+}
+
+.delete-folder-btn:hover {
+    background-color: #d32f2f;
+}
+
+.delete-folder-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Hiển thị ảnh */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.image-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: white;
+}
+
+.image-container {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-info {
+    padding: 10px 0;
+}
+
+.image-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-btn {
+    background-color: #f44336;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
